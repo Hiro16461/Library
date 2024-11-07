@@ -1,0 +1,210 @@
+@import url(reset.css);
+
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.app-container {
+	height: 100vh;
+	padding: 2rem 1rem;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #d4bdac;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.title {
+	flex: 1 1 auto;
+	margin-bottom: 1rem;
+	font-size: 24pt;
+	font-weight: 600;
+	font-family: sans-serif;
+}
+
+.btn-add {
+	background-color: #3f8b3f;
+	color: white;
+	border: none;
+	padding: 1rem;
+	border-radius: 0.7rem;
+	font-size: 12pt;
+}
+
+.btn-add:hover {
+	background-color: #306b30;
+	cursor: pointer;
+}
+
+.library-display {
+	width: 100%;
+	padding: 2rem 1rem;
+	border-radius: 1rem;
+	border: 4px solid black;
+	background-color: #fff1db;
+	box-shadow: 7px 7px rgb(18, 28, 37);
+	flex: 1 1 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: start;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.book-card {
+	max-height: 300px;
+	width: 400px;
+	flex: 1 1 auto;
+	padding: 1rem;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	line-height: 20pt;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.book-title {
+	font-size: 14pt;
+	font-weight: 600;
+	font-family: sans-serif;
+}
+
+.book-author {
+	font-size: 12pt;
+}
+
+.book-pages {
+	font-size: 12pt;
+	color: rgb(43, 43, 43);
+}
+
+.book-read {
+	color: green;
+}
+
+.book-not-read {
+	color: brown;
+}
+
+.btn-remove {
+	padding: 0.5rem 1rem;
+	background-color: #ca4c3b;
+	color: white;
+	border: none;
+	border-radius: 0.5rem;
+}
+
+.btn-remove:hover {
+	background-color: #b64435;
+	cursor: pointer;
+}
+
+.button-group {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.btn-toggle {
+	padding: 0.5rem 1rem;
+	background-color: #8f634f;
+	color: white;
+	border: none;
+	border-radius: 0.5rem;
+}
+
+.btn-toggle:hover {
+	background-color: #724f3f;
+	cursor: pointer;
+}
+
+.modal {
+	width: 300px;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.modal-title {
+	font-size: 12pt;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+
+::backdrop {
+	background-color: black;
+	opacity: 0.7;
+}
+
+.form-control {
+	width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	margin-bottom: 1rem;
+}
+
+.btn-submit {
+	border: none;
+	padding: 0.5rem 2rem;
+	background-color: #3f8b3f;
+	color: white;
+	border-radius: 0.5rem;
+}
+
+.btn-submit:hover {
+	background-color: #306b30;
+	cursor: pointer;
+}
+
+.mb {
+	margin-bottom: 1rem;
+}
+
+.error {
+	position: relative;
+	background-color: #b66060;
+	color: rgb(94, 9, 9);
+	padding: 1rem 1rem 1.5rem 1rem;
+	border: 2px solid rgb(63, 15, 15);
+	border-radius: 0.5rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.error-close {
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+	color: rgb(75, 4, 4);
+	background-color: #b66060;
+	border: none;
+	font-weight: 600;
+}
+
+.error-close:hover {
+	color: rgb(172, 17, 17);
+	cursor: pointer;
+}
+
+.book-card > hr {
+	width: 100%;
+}
