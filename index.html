@@ -7,40 +7,27 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="app-container">
-			<div class="header">
-				<h1 class="title">Library App</h1>
-				<button type="button" class="btn-add">Add Book</button>
-			</div>
-			<div class="library-display"></div>
-			<dialog class="modal">
-				<div class="error mb hidden">
-					<p>There was an error submiting the form.</p>
+		<dialog id="dialog">
+			<form action="">
+				<label for="title">Title:</label>
+				<input type="text" name="title" id="title" value="title">
+				<label for="author">Author:</label>
+				<input type="text" name="author" id="author" value="author">
+				<label for="pages">Pages:</label>
+				<input type="number" name="pages" id="pages" value="pages" min="1">
+				<label for="read">Read:</label>
+				<input type="checkbox" name="read" id="read" value="read">
+				<div>
+					<button value="cancel" formmethod="dialog">cancel</button>
+					<button value="default" id="addBookBtn">Add Book</button>
 				</div>
-				<form action="submit" id="newBookForm" method="dialog">
-					<h3 class="modal-title">Add new Book</h3>
-					<hr>
-					<div class="form-control">
-						<label for="book-title" class="mb">Title</label>
-						<input type="text" name="book-title">
-					</div>
-					<div class="form-control">
-						<label for="book-author" class="mb">Author</label>
-						<input type="text" name="book-author">
-					</div>
-					<div class="form-control">
-						<label for="book-pages" class="mb">Pages</label>
-						<input type="number" name="book-pages">
-					</div>
-					<div class="form-checkbox mb">
-						<label for="book-read" class="mb">Read</label>
-						<input type="checkbox" name="book-read">
-					</div>
-					<hr class="mb">
-				</form>
-				<input type="submit" value="Add" class="btn-submit" form="newBookForm">
-			</dialog>
+			</form>
+		</dialog>
+		<p>
+			<button id="showDialog">show dialog</button>
+		</p>
+		<div class="container">
 		</div>
-		<script src="main.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
